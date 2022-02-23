@@ -1,7 +1,10 @@
 # Lab1 ASD Boiko K B
+
+
+
+
 using System;
 using System.Diagnostics;
-
 namespace Lab1asd
 {
     class Program
