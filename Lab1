@@ -1,263 +1,203 @@
-using System;
+uusing System;
 using System.Diagnostics;
 
 namespace Lab1asd
 {
-    class Program
+class Program
     {
-        static void NumberGenerator(int[] Vals, int n)
-        {
-            Random aRand = new Random();
-            for (int i = 0; i < Vals.Length; i++)
-                Vals[i] = aRand.Next(n);
-        }
-       
-        static void Task1()
-        {
-           // Console.Clear();
-            Console.WriteLine("1. Пошук перебором");
-            Console.WriteLine("Оберіть тип даних, з яким будемо працювати:");
-            Console.WriteLine("1. Масив 2. Лінійний звʼязний список");
-
-            int key = Convert.ToInt32(Console.ReadLine());
-            if (key == 1)
-            {
-                int i, j=1 ,nom=0;
-                bool found = false;
-                Console.WriteLine("Введіть розмір масиву");
-                int n = int.Parse(Console.ReadLine());
-                int[] mas = new int[n]; 
-                Console.WriteLine("Згенеруємо масив ");
-                NumberGenerator(mas, n);
-                for ( i = 0; i < n; i++)
-                {
-                    Console.Write(mas[i] + " ");
-                }
-                Console.WriteLine("\n Введіть шуканий елемент");
-                int elem = int.Parse(Console.ReadLine());
-
-                var timer = new Stopwatch();
-                timer.Start();
-                while ((j < n) && (found == false))
-                {
-                    if (mas[j]==elem)
-                    {
-                        nom = j;
-                        found = true;
-                    }
-                    j++;
-                }
-                timer.Stop();
-
-                if (found == true)
-                    Console.WriteLine("Елемент знайдено з індексом " + nom);
-                else if (j == n)
-                    Console.WriteLine("Цього елементу немає у масиві");
-
-                Console.WriteLine("Витрачено часу: " + timer.Elapsed);
-                Console.WriteLine("Витрачено часу в мілісекундах: " + timer.ElapsedTicks);
-                Console.ReadKey();
-            }
-            else if(key == 2)
-            {
-               Console.WriteLine("\n В процесі розробки :(");
-            }
-            else Console.WriteLine("\n Введіть 1 або 2");
-        }
-
-
-        static void Task2()
-        {
-            //Console.Clear();
-            Console.WriteLine("2. Пошук з бар'єром\n");
-            Console.WriteLine("Оберіть тип даних, з яким будемо працювати:");
-            Console.WriteLine("1. Масив 2. Лінійний звʼязний список");
-            int key = Convert.ToInt32(Console.ReadLine());
-
-            if (key == 1)
-            {
-                int i;
-                Console.WriteLine("Введіть розмір масиву");
-                int n = int.Parse(Console.ReadLine());
-                int[] mas = new int[n+2];
-                Console.WriteLine("Згенеруємо масив ");
-                NumberGenerator(mas, n);
-                for (i = 0; i < n; i++)
-                {
-                    Console.Write(mas[i] + " ");
-                }
-                Console.WriteLine("\n Введіть шуканий елемент");
-                int elem = int.Parse(Console.ReadLine());
-                int j=1;
-                mas[n+1] = elem;
-                var timer = new Stopwatch();
-                timer.Start();
-                while (mas[j] != elem)
-                    j++;
-                timer.Stop();
-                if (j <= n) Console.WriteLine("Елемент знайдено з індексом " + j);
-                else Console.WriteLine("Цього елементу немає у масиві");
-
-                Console.WriteLine("Витрачено часу: " + timer.Elapsed);
-                Console.WriteLine("Витрачено часу в мілісекундах: " + timer.ElapsedTicks);
-                Console.ReadKey();
-            }
-
-            else if (key == 2)
-            {
-                Console.WriteLine("\n В процесі розробки :(");
-            }
-            else Console.WriteLine("\n Введіть 1 або 2");
-
-        }
-
-        static void Task3()
-        {
-            
-            //Console.Clear();
-            Console.WriteLine("3. Бінарний пошук\n");
-            Console.WriteLine("Оберіть тип даних, з яким будемо працювати:");
-            Console.WriteLine("1. Масив 2. Лінійний звʼязний список");
-            int key = Convert.ToInt32(Console.ReadLine());
-
-            if (key == 1)
-            {
-               
-                int i, nom=0;
-                Console.WriteLine("Введіть розмір масиву");
-                int n = int.Parse(Console.ReadLine());
-                int[] mas = new int[n+1];
-                Console.WriteLine("Згенеруємо масив ");
-                NumberGenerator(mas, n);
-                Array.Sort(mas);
-                for (i = 0; i < n; i++)
-                {
-                    Console.Write(mas[i] + " ");
-                }
-                Console.WriteLine("\n Введіть шуканий елемент");
-                int elem = int.Parse(Console.ReadLine());
-                int left = 0;
-                int right = n;
-                bool found = false;
-
-                var timer = new Stopwatch();
-                timer.Start();
-                while ((left <= right) && (found == false))
-                {
-                    int m = (left + right) / 2;
-                    if (mas[m] == elem)
-                    {
-                        found = true;
-                        nom = m;
-                    }
-                    else if (mas[m] < elem)
-                        left = m + 1;
-                    else right = m - 1;
-                }
-                timer.Stop();
-                if (found == true)
-                    Console.WriteLine("Елемент знайдено з індексом " + nom);
-                else if (found == false)
-                    Console.WriteLine("Цього елементу немає у масиві");
-
-                Console.WriteLine("Витрачено часу: " + timer.Elapsed);
-                Console.WriteLine("Витрачено часу в мілісекундах: " + timer.ElapsedTicks);
-                Console.ReadKey();
-            }
-            else if (key == 2)
-            {
-                Console.WriteLine("\n В процесі розробки :(");
-            }
-            else Console.WriteLine("\n Введіть 1 або 2");
-
-        }
-
-        static void Task4()
-        {
-            //Console.Clear();
-            Console.WriteLine("4. Бінарний пошук за правилом золотого перерізу\n");
-            Console.WriteLine("Оберіть тип даних, з яким будемо працювати:");
-            Console.WriteLine("1. Масив 2. Лінійний звʼязний список");
-            int key = Convert.ToInt32(Console.ReadLine());
-
-            if (key == 1)
-            {
-                int i, nom = 0;
-                Console.WriteLine("Введіть розмір масиву");
-                int n = int.Parse(Console.ReadLine());
-                int[] mas = new int[n + 1];
-                Console.WriteLine("Згенеруємо масив ");
-                NumberGenerator(mas, n);
-                Array.Sort(mas);
-                for (i = 0; i < n; i++)
-                {
-                    Console.Write(mas[i] + " ");
-                }
-                Console.WriteLine("\n Введіть шуканий елемент");
-                int elem = int.Parse(Console.ReadLine());
-                int left = 0;
-                int right = n;
-                bool found = false;
-                var timer = new Stopwatch();
-                timer.Start();
-                while ((left <= right) && (found == false))
-                {
-                    int m = (int) (left + 0.618 * (right - left));
-                    if (mas[m] == elem)
-                    {
-                        found = true;
-                        nom = m;
-                    }
-                    else if (mas[m] < elem)
-                        left = m + 1;
-                    else right = m - 1;
-                }
-                timer.Stop();
-                if (found == true)
-                    Console.WriteLine("Елемент знайдено з індексом " + nom);
-                else if (found == false)
-                    Console.WriteLine("Цього елементу немає у масиві");
-
-                Console.WriteLine("Витрачено часу: " + timer.Elapsed);
-                Console.WriteLine("Витрачено часу в мілісекундах: " + timer.ElapsedTicks);
-                Console.ReadKey();
-            }
-            else if (key == 2)
-            {
-                Console.WriteLine("\n В процесі розробки :(");
-            }
-            else Console.WriteLine("\n Введіть 1 або 2");
-        }
-
-        static void Test()
+        static void Arrays()
         {
             Console.Clear();
-            Console.ReadKey();
-            double phi = 1.6;
-            Console.WriteLine("phi = " + phi);
+            Console.WriteLine("\nМасив");
+            Console.WriteLine("Введіть розмір масиву");
+            int arrsize = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введіть діапазон значень елементів");
+            int rangeofvalues = int.Parse(Console.ReadLine());
+            int[] myarray = new int[arrsize+1];
+            //генерація масиву
+            Random aRand = new Random();
+            for (int i = 0; i < arrsize; i++)
+                myarray[i] = aRand.Next(rangeofvalues);
+            Console.WriteLine("Згенерували масив");
+            Arrayoutput(myarray, arrsize);
+            menu();
+
+            void menu()
+            {
+                Console.WriteLine("\n\nОберіть дію");
+                Console.WriteLine("0. Вивід масиву");
+                Console.WriteLine("1. Пошук перебором");
+                Console.WriteLine("2. Пошук з барʼєром");
+                Console.WriteLine("3. Бінарний пошук");
+                Console.WriteLine("4. Бінарний пошук за правилом золотого перерізу");
+                Console.WriteLine("Для виходу в меню - виберіть будь-яку іншу цифру");
+                int key = Convert.ToInt32(Console.ReadLine());
+                switch (key)
+                {
+                    case 0: Arrayoutput(myarray, arrsize); menu(); break;
+                    case 1: Linearsearch(myarray, arrsize); menu(); break;
+                    case 2: Searchwithbarrier(myarray, arrsize); menu(); break;
+                    case 3: Binarysearch(myarray, arrsize); menu(); break;
+                    case 4: Binarysearchbygoldensection(myarray, arrsize); menu(); break;
+                    default: Main(); break;
+                }
+            }
         }
+
+        static void Arrayoutput(int[] array, int size)
+        {
+            Console.WriteLine("\nВивід масиву:");
+            for (int i = 0; i < size; i++)
+            {
+                Console.Write(array[i] + " ");
+            }
+            Console.WriteLine();
+        }
+
+        static void Linearsearch(int[] array, int size)
+        {
+            Console.WriteLine("Пошук перебором");
+            Console.WriteLine("Введіть шуканий елемент");
+            int value = int.Parse(Console.ReadLine());
+            var timer = new Stopwatch();
+            int j = 0, index = 0;
+            bool found = false;
+            timer.Start();
+            //пошук перебором
+            while ((j < size) && (found == false))
+            {
+                if (array[j] == value)
+                {
+                    index = j;
+                    found = true;
+                }
+                j++;
+            }
+            timer.Stop();
+            if (found == true)
+                Console.WriteLine("Елемент знайдено з індексом " + index);
+            else if (j == size)
+                Console.WriteLine("Цього елементу немає у масиві");
+            Console.WriteLine("Витрачено часу: " + timer.Elapsed);
+            Console.WriteLine("Витрачено часу в мілісекундах: " + timer.ElapsedTicks);
+            Console.ReadKey();
+        }
+       static void Searchwithbarrier(int[] array, int size)
+        {
+            Console.WriteLine("\nПошук з барʼєром");
+            Console.WriteLine("Введіть шуканий елемент");
+            int value = int.Parse(Console.ReadLine());
+            int j = 0;
+            array[size] = value;
+            var timer = new Stopwatch();
+            timer.Start();
+            //пошук із барʼєром
+            while (array[j] != value)
+                j++;
+            timer.Stop();
+            if (j < size) Console.WriteLine("Елемент знайдено з індексом " + j);
+            else Console.WriteLine("Цього елементу немає у масиві");
+            Console.WriteLine("Витрачено часу: " + timer.Elapsed);
+            Console.WriteLine("Витрачено часу в мілісекундах: " + timer.ElapsedTicks);
+            Console.ReadKey();
+        }
+
+        static void Binarysearch(int[] array, int size)
+        {
+            Console.WriteLine("\nБінарний пошук");
+            Array.Sort(array);
+            Console.WriteLine("Відсортований масив\n");
+            Arrayoutput(array, size);
+            Console.WriteLine("\nВведіть шуканий елемент");
+            int value = int.Parse(Console.ReadLine());
+            int index = 0;
+            int left = 0;
+            int right = size;
+            bool found = false;
+            var timer = new Stopwatch();
+            timer.Start();
+            //бінарний пошук
+            while ((left <= right) && (found == false))
+            {
+                int middle = (left + right) / 2;
+                if (array[middle] == value)
+                {
+                    found = true;
+                    index = middle;
+                }
+                else if (array[middle] < value)
+                    left = middle + 1;
+                else right = middle - 1;
+            }
+            timer.Stop();
+            if (found == true)
+                Console.WriteLine("Елемент знайдено з індексом " + index);
+            else if (found == false)
+                Console.WriteLine("Цього елементу немає у масиві");
+            Console.WriteLine("Витрачено часу: " + timer.Elapsed);
+            Console.WriteLine("Витрачено часу в мілісекундах: " + timer.ElapsedTicks);
+            Console.ReadKey();
+        }
+       static void Binarysearchbygoldensection(int[] array, int size)
+        {
+            Console.WriteLine("\nБінарний пошук за золотим перерізом");
+            Array.Sort(array);
+            Console.WriteLine("Відсортований масив\n");
+            Arrayoutput(array,size);
+            Console.WriteLine("\nВведіть шуканий елемент");
+            int value = int.Parse(Console.ReadLine());
+            int index = 0;
+            int left = 0;
+            int right = size;
+            bool found = false;
+            var timer = new Stopwatch();
+            timer.Start();
+            //бінарний пошук за правилом золотого перерізу
+            while ((left <= right) && (found == false))
+            {
+                int m = (int)(left + 0.618 * (right - left));
+                if (array[m] == value)
+                {
+                    found = true;
+                    index = m;
+                }
+                else if (array[m] < value)
+                    left = m + 1;
+                else right = m - 1;
+            }
+            timer.Stop();
+            if (found == true)
+                Console.WriteLine("Елемент знайдено з індексом " + index);
+            else if (found == false)
+                Console.WriteLine("Цього елементу немає у масиві");
+            Console.WriteLine("Витрачено часу: " + timer.Elapsed);
+            Console.WriteLine("Витрачено часу в мілісекундах: " + timer.ElapsedTicks);
+            Console.ReadKey();
+        }
+
+
+        static void Linked_list()
+        {
+            Console.Clear();
+            Console.WriteLine("\nЛінійний звʼязний список");
+        }
+
+
         static void Main()
         {
-            Console.WriteLine("\n Бойко Костянтин Богданович \n");
-            Console.WriteLine("\n \n Лабораторна робота 1");
-            Console.ResetColor();
-            Console.WriteLine("Завдання:");
-            Console.WriteLine("1. Пошук перебором");
-            Console.WriteLine("2. Пошук з бар'єром");
-            Console.WriteLine("3. Бінарний пошук");
-            Console.WriteLine("4. Бінарний пошук за правилом золотого перерізу");
-            Console.WriteLine("Для завершення роботи натисність iншу клавiшу");
-            Console.WriteLine("Виберiть завдання:");
-                int key = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\nБойко Костянтин Богданович \n");
+            Console.WriteLine("\nЛабораторна робота 1");
+            Console.WriteLine("\nОберіть тип даних, з яким будемо працювати:");
+            Console.WriteLine("1. Масив");
+            Console.WriteLine("2. Лінійний звʼзний список");
+            int key = Convert.ToInt32(Console.ReadLine());
             switch (key)
             {
-                case 1: Task1(); Main(); break;
-                case 2: Task2(); Main(); break;
-                case 3: Task3(); Main(); break;
-                case 4: Task4(); Main(); break;
-                case 5: Test(); Main(); break;
+                case 1: Arrays(); Main(); break;
+                case 2: Linked_list(); Main(); break;
                 default: break;
             }
         }
     }
+
 }
