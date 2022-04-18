@@ -35,8 +35,8 @@ namespace Lab1asd
             for (int i = 0; i < arrsize; i++)
                 myarray[i] = aRand.Next(rangeofvalues);
             //------------------------------------
-            Console.WriteLine("Згенерували масив");
-            Arrayoutput(myarray, arrsize);
+            Console.WriteLine("Масив згенеровано");
+            //Arrayoutput(myarray, arrsize);
             menu();
             //--------------------Меню для масивів--------------------
             void menu()
@@ -73,7 +73,7 @@ namespace Lab1asd
         //--------------------Пошук перебором--------------------
         static void Linearsearch(int[] array, int size)
         {
-            Console.WriteLine("Пошук перебором");
+            Console.WriteLine("\nПошук перебором");
             Console.WriteLine("Введіть шуканий елемент");
             int value = int.Parse(Console.ReadLine());
             var timer = new Stopwatch();
@@ -117,13 +117,12 @@ namespace Lab1asd
             Console.WriteLine("Витрачено часу в мілісекундах: " + timer.ElapsedTicks);
             Console.ReadKey();
         }
-        //--------------------Бінарний пошук (стандартни1)---------------------
+        //--------------------Бінарний пошук (стандартний)---------------------
         static void Binarysearch(int[] array, int size)
         {
             Console.WriteLine("\nБінарний пошук");
             Array.Sort(array);
-            Console.WriteLine("Відсортований масив\n");
-            Arrayoutput(array, size);
+            Console.WriteLine("Масив відсортували.");
             Console.WriteLine("\nВведіть шуканий елемент");
             int value = int.Parse(Console.ReadLine());
             int index = 0;
@@ -158,8 +157,7 @@ namespace Lab1asd
         {
             Console.WriteLine("\nБінарний пошук за золотим перерізом");
             Array.Sort(array);
-            Console.WriteLine("Відсортований масив\n");
-            Arrayoutput(array,size);
+            Console.WriteLine("Масив відсортували.");
             Console.WriteLine("\nВведіть шуканий елемент");
             int value = int.Parse(Console.ReadLine());
             int index = 0;
@@ -205,8 +203,8 @@ namespace Lab1asd
             rangeofvalues = Convert.ToInt32(Console.ReadLine());
             head = null;
             NumberGenerator(ref head, ref largeoflist, ref rangeofvalues);
-            Console.WriteLine("\nУтворений список:");
-            Listoutput(head);
+            Console.WriteLine("\nСписок згенерований");
+            //Listoutput(head);
             menu();
             //--------------------Меню для лініних звʼязних списків--------------------
             void menu()
@@ -278,9 +276,9 @@ namespace Lab1asd
             }
             timer.Stop();
             if (found)
-                Console.WriteLine("\nЕлемент знайдено");
+                Console.WriteLine("Елемент знайдено");
             else
-                Console.WriteLine("\nЕлемент не знайдено");
+                Console.WriteLine("Елемент не знайдено");
             Console.WriteLine("Витрачено часу: " + timer.Elapsed);
             Console.WriteLine("Витрачено часу в мілісекундах: " + timer.ElapsedTicks);
             Console.ReadKey();
@@ -298,9 +296,9 @@ namespace Lab1asd
                 current = current.next;
             timer.Stop();
             if (current.data == x)
-                Console.WriteLine("\nЕлемент знайдено");
+                Console.WriteLine("Елемент знайдено");
             else
-                Console.WriteLine("\nЕлемент не знайдено");
+                Console.WriteLine("Елемент не знайдено");
             Console.WriteLine("Витрачено часу: " + timer.Elapsed);
             Console.WriteLine("Витрачено часу в мілісекундах: " + timer.ElapsedTicks);
             Console.ReadKey();
@@ -357,7 +355,7 @@ namespace Lab1asd
         //--------------------Бінарний пошук(стандартний)--------------------
         public static void StandartBinarySearch(Item head)
         {
-            Console.WriteLine("\nБінарний пошук");
+            Console.WriteLine("\nБінарний пошук\n");
             Console.WriteLine("Введіть шуканий елемент");
             int value = Convert.ToInt32(Console.ReadLine());
             Item start = head;
@@ -383,9 +381,9 @@ namespace Lab1asd
             timer.Stop();
 
             if (searchedvalue)
-                Console.WriteLine("\nЕлемент знайдено");
+                Console.WriteLine("Елемент знайдено");
             else
-                Console.WriteLine("\nЕлемент не знайдено");
+                Console.WriteLine("Елемент не знайдено");
             Console.WriteLine("Витрачено часу: " + timer.Elapsed);
             Console.WriteLine("Витрачено часу в мілісекундах: " + timer.ElapsedTicks);
             Console.ReadKey();
@@ -431,7 +429,7 @@ namespace Lab1asd
         //--------------------Бінарний пошук(за правилом золотого перерізу)--------------------
         public static void BinarySearchbygoldensection(Item head)
         {
-            Console.WriteLine("\nБінарний пошук за золотим перерізом");
+            Console.WriteLine("\nБінарний пошук за золотим перерізом\n");
             Console.WriteLine("Введіть шуканий елемент");
             int value = Convert.ToInt32(Console.ReadLine());
             Item start = head;
@@ -457,9 +455,9 @@ namespace Lab1asd
             timer.Stop();
 
             if (searchedvalue)
-                Console.WriteLine("\nЕлемент знайдено");
+                Console.WriteLine("Елемент знайдено");
             else
-                Console.WriteLine("\nЕлемент не знайдено");
+                Console.WriteLine("Елемент не знайдено");
             Console.WriteLine("Витрачено часу: " + timer.Elapsed);
             Console.WriteLine("Витрачено часу в мілісекундах: " + timer.ElapsedTicks);
             Console.ReadKey();
