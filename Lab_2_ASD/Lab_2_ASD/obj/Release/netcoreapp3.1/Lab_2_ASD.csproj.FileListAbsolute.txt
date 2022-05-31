@@ -1,0 +1,12 @@
+/Users/kostia/Projects/Lab_2_ASD/Lab_2_ASD/bin/Release/netcoreapp3.1/Lab_2_ASD.deps.json
+/Users/kostia/Projects/Lab_2_ASD/Lab_2_ASD/bin/Release/netcoreapp3.1/Lab_2_ASD.runtimeconfig.json
+/Users/kostia/Projects/Lab_2_ASD/Lab_2_ASD/bin/Release/netcoreapp3.1/Lab_2_ASD.runtimeconfig.dev.json
+/Users/kostia/Projects/Lab_2_ASD/Lab_2_ASD/bin/Release/netcoreapp3.1/Lab_2_ASD.dll
+/Users/kostia/Projects/Lab_2_ASD/Lab_2_ASD/bin/Release/netcoreapp3.1/Lab_2_ASD.pdb
+/Users/kostia/Projects/Lab_2_ASD/Lab_2_ASD/obj/Release/netcoreapp3.1/Lab_2_ASD.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kostia/Projects/Lab_2_ASD/Lab_2_ASD/obj/Release/netcoreapp3.1/Lab_2_ASD.AssemblyInfoInputs.cache
+/Users/kostia/Projects/Lab_2_ASD/Lab_2_ASD/obj/Release/netcoreapp3.1/Lab_2_ASD.AssemblyInfo.cs
+/Users/kostia/Projects/Lab_2_ASD/Lab_2_ASD/obj/Release/netcoreapp3.1/Lab_2_ASD.csproj.CoreCompileInputs.cache
+/Users/kostia/Projects/Lab_2_ASD/Lab_2_ASD/obj/Release/netcoreapp3.1/Lab_2_ASD.dll
+/Users/kostia/Projects/Lab_2_ASD/Lab_2_ASD/obj/Release/netcoreapp3.1/Lab_2_ASD.pdb
+/Users/kostia/Projects/Lab_2_ASD/Lab_2_ASD/obj/Release/netcoreapp3.1/Lab_2_ASD.genruntimeconfig.cache
