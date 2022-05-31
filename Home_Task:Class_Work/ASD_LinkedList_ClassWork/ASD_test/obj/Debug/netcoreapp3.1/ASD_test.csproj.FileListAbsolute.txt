@@ -1,0 +1,13 @@
+/Users/kostia/Projects/ASD_test/ASD_test/bin/Debug/netcoreapp3.1/ASD_test.deps.json
+/Users/kostia/Projects/ASD_test/ASD_test/bin/Debug/netcoreapp3.1/ASD_test.runtimeconfig.json
+/Users/kostia/Projects/ASD_test/ASD_test/bin/Debug/netcoreapp3.1/ASD_test.runtimeconfig.dev.json
+/Users/kostia/Projects/ASD_test/ASD_test/bin/Debug/netcoreapp3.1/ASD_test.dll
+/Users/kostia/Projects/ASD_test/ASD_test/bin/Debug/netcoreapp3.1/ASD_test.pdb
+/Users/kostia/Projects/ASD_test/ASD_test/obj/Debug/netcoreapp3.1/ASD_test.csproj.AssemblyReference.cache
+/Users/kostia/Projects/ASD_test/ASD_test/obj/Debug/netcoreapp3.1/ASD_test.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kostia/Projects/ASD_test/ASD_test/obj/Debug/netcoreapp3.1/ASD_test.AssemblyInfoInputs.cache
+/Users/kostia/Projects/ASD_test/ASD_test/obj/Debug/netcoreapp3.1/ASD_test.AssemblyInfo.cs
+/Users/kostia/Projects/ASD_test/ASD_test/obj/Debug/netcoreapp3.1/ASD_test.csproj.CoreCompileInputs.cache
+/Users/kostia/Projects/ASD_test/ASD_test/obj/Debug/netcoreapp3.1/ASD_test.dll
+/Users/kostia/Projects/ASD_test/ASD_test/obj/Debug/netcoreapp3.1/ASD_test.pdb
+/Users/kostia/Projects/ASD_test/ASD_test/obj/Debug/netcoreapp3.1/ASD_test.genruntimeconfig.cache
