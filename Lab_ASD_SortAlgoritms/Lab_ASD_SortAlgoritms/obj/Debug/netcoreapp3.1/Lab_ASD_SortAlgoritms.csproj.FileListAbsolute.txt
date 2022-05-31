@@ -1,0 +1,13 @@
+/Users/kostia/Projects/Lab_ASD_SortAlgoritms/Lab_ASD_SortAlgoritms/bin/Debug/netcoreapp3.1/Lab_ASD_SortAlgoritms.deps.json
+/Users/kostia/Projects/Lab_ASD_SortAlgoritms/Lab_ASD_SortAlgoritms/bin/Debug/netcoreapp3.1/Lab_ASD_SortAlgoritms.runtimeconfig.json
+/Users/kostia/Projects/Lab_ASD_SortAlgoritms/Lab_ASD_SortAlgoritms/bin/Debug/netcoreapp3.1/Lab_ASD_SortAlgoritms.runtimeconfig.dev.json
+/Users/kostia/Projects/Lab_ASD_SortAlgoritms/Lab_ASD_SortAlgoritms/bin/Debug/netcoreapp3.1/Lab_ASD_SortAlgoritms.dll
+/Users/kostia/Projects/Lab_ASD_SortAlgoritms/Lab_ASD_SortAlgoritms/bin/Debug/netcoreapp3.1/Lab_ASD_SortAlgoritms.pdb
+/Users/kostia/Projects/Lab_ASD_SortAlgoritms/Lab_ASD_SortAlgoritms/obj/Debug/netcoreapp3.1/Lab_ASD_SortAlgoritms.csproj.AssemblyReference.cache
+/Users/kostia/Projects/Lab_ASD_SortAlgoritms/Lab_ASD_SortAlgoritms/obj/Debug/netcoreapp3.1/Lab_ASD_SortAlgoritms.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kostia/Projects/Lab_ASD_SortAlgoritms/Lab_ASD_SortAlgoritms/obj/Debug/netcoreapp3.1/Lab_ASD_SortAlgoritms.AssemblyInfoInputs.cache
+/Users/kostia/Projects/Lab_ASD_SortAlgoritms/Lab_ASD_SortAlgoritms/obj/Debug/netcoreapp3.1/Lab_ASD_SortAlgoritms.AssemblyInfo.cs
+/Users/kostia/Projects/Lab_ASD_SortAlgoritms/Lab_ASD_SortAlgoritms/obj/Debug/netcoreapp3.1/Lab_ASD_SortAlgoritms.csproj.CoreCompileInputs.cache
+/Users/kostia/Projects/Lab_ASD_SortAlgoritms/Lab_ASD_SortAlgoritms/obj/Debug/netcoreapp3.1/Lab_ASD_SortAlgoritms.dll
+/Users/kostia/Projects/Lab_ASD_SortAlgoritms/Lab_ASD_SortAlgoritms/obj/Debug/netcoreapp3.1/Lab_ASD_SortAlgoritms.pdb
+/Users/kostia/Projects/Lab_ASD_SortAlgoritms/Lab_ASD_SortAlgoritms/obj/Debug/netcoreapp3.1/Lab_ASD_SortAlgoritms.genruntimeconfig.cache
